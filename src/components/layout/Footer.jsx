@@ -6,10 +6,10 @@ import periscopeLogo from '../../assets/footer-periscope.png'
 
 export default function Footer() {
     return (
-        <div className='flex justify-around bg-gray-700'>
-            <button>SIGN-UP NOW!</button>
-            <ul className='flex gap-3'>
-                <li>FOLLOW US</li>
+        <div className='flex justify-around bg-gray-700 p-5'>
+            <button className='border-2 p-2 border-blue-400 text-white'>SIGN-UP NOW!</button>
+            <ul className='flex gap-4 place-items-center'>
+                <li className='font-semibold text-blue-400'>FOLLOW US</li>
                 <li><img src={facebookLogo} alt="" /></li>
                 <li><img src={twitterLogo} alt="" /></li>
                 <li><img src={youtubeLogo} alt="" /></li>

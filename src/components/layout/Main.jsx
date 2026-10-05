@@ -180,19 +180,20 @@ const comics = [
 
 export default function Main() {
     return (
-        <div className='bg-gray-900'>
+        <div className='bg-gray-900 pb-4'>
             <img src={mainBackg} alt="backg" className='h-65 w-full object-cover object-top' />
-            <div className='bg-blue-400 text-white font-bold w-40 h-7 text-center'>CURRENT SERIES</div>
-            <section className='grid grid-cols-6'>
+            <div className='bg-blue-400 text-white font-bold w-40 h-10 p-2 text-center ml-40 -translate-y-4'>CURRENT SERIES</div>
+            <section className='grid grid-cols-6 mx-20'>
                 {
                     comics.map((element) => (
                         <div key={element.id} className='flex flex-col'>
-                            <img src={element.thumb} alt="comic img" className='h-44 w-44 object-cover object-top mt-10' />
+                            <img src={element.thumb} alt="comic img" className='h-40 w-40 object-cover object-top mt-10' />
                             <span className='text-white uppercase mt-2 font-medium text-sm'>{element.series}</span>
                         </div>
                     ))
                 }
             </section>
+            <div className='bg-blue-400 text-white font-semibold w-40 h-10 mx-auto mt-8 block text-center p-2'>LOAD MORE</div>
         </div>
     )
 }
