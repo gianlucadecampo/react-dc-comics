@@ -1,4 +1,5 @@
 import mainBackg from '../../assets/jumbotron.jpg'
+import Card from '../ui/Card'
 
 //array of components
 const comics = [
@@ -186,10 +187,7 @@ export default function Main() {
             <section className='grid grid-cols-6 mx-20'>
                 {
                     comics.map((element) => (
-                        <div key={element.id} className='flex flex-col'>
-                            <img src={element.thumb} alt="comic img" className='h-40 w-40 object-cover object-top mt-10' />
-                            <span className='text-white uppercase mt-2 font-medium text-sm'>{element.series}</span>
-                        </div>
+                        <Card key={element.id} img={element.thumb} name={element.series} /> //use of component props
                     ))
                 }
             </section>
