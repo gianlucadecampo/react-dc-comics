@@ -1,22 +1,16 @@
 import dcLogo from '../../assets/dc-logo.png'
 
 export default function Header() {
+    const menuSections = ['CHARACTERS', 'COMICS', 'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 'VIDEOS', 'FANS', 'NEWS', 'SHOP']
     return (
         <div className="flex justify-around place-items-center p-5 mx-5">
             <img src={dcLogo} alt="logo" className='size-15' />
             <ul className="flex gap-5 tracking-tight font-semibold">
-                <li>CHARACTERS</li>
-                <li>COMICS</li>
-                <li>MOVIES</li>
-                <li>TV</li>
-                <li>GAMES</li>
-                <li>COLLECTIBLES</li>
-                <li>VIDEOS</li>
-                <li>FANS</li>
-                <li>NEWS</li>
-                <li>SHOP</li>
+                {menuSections.map((element, index) => (
+                    <li key={index}>{element}</li>
+                )) //definition of multiple DOM tags with .map()
+                }
             </ul>
         </div>
-
     )
 }
