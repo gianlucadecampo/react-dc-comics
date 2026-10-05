@@ -1,9 +1,10 @@
+import dcLogo from '../../assets/dc-logo.png'
 
 export default function Header() {
     return (
-        <div>
-            <img src="" alt="" />
-            <ul className="flex">
+        <div className="flex justify-around place-items-center p-5">
+            <img src={dcLogo} alt="logo" className='size-15' />
+            <ul className="flex gap-5">
                 <li>CHARACTERS</li>
                 <li>COMICS</li>
                 <li>MOVIES</li>

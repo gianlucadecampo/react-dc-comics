@@ -1,3 +1,5 @@
+import mainBackg from '../../assets/jumbotron.jpg'
+
 //array of components
 const comics = [
     {
@@ -178,6 +180,19 @@ const comics = [
 
 export default function Main() {
     return (
-        <div>Main</div>
+        <div className='bg-gray-900'>
+            <img src={mainBackg} alt="backg" className='h-65 w-full object-cover object-top' />
+            <div className='bg-blue-400 text-white font-bold w-40 h-7 text-center'>CURRENT SERIES</div>
+            <section className='grid grid-cols-6'>
+                {
+                    comics.map((element) => (
+                        <div key={element.id} className='flex flex-col'>
+                            <img src={element.thumb} alt="comic img" className='h-44 w-44 object-cover object-top mt-10' />
+                            <span className='text-white uppercase mt-2 font-medium text-sm'>{element.series}</span>
+                        </div>
+                    ))
+                }
+            </section>
+        </div>
     )
 }
